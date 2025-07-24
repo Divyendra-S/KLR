@@ -70,38 +70,50 @@ export default function Home() {
         }
         
         .card-hover {
-          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .card-hover:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 20px 40px rgba(139, 115, 85, 0.12);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
         
         .professional-gradient {
-          background: linear-gradient(135deg, #F7F5F3 0%, #EDE8E3 50%, #E8E2DB 100%);
+          background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
         }
         
         .mocha-gradient {
-          background: linear-gradient(135deg, #8B7355 0%, #A0926B 100%);
+          background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
         }
         
-        .earth-gradient {
-          background: linear-gradient(135deg, #F4F1EB 0%, #E8DDD4 100%);
+        .dark-gradient {
+          background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
         }
         
         .accent-gradient {
-          background: linear-gradient(135deg, #6B5B47 0%, #8B7355 100%);
+          background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
         }
         
-        .black-mocha-button {
-          background: linear-gradient(135deg, #1a1a1a 0%, #2a2520 50%, #1a1a1a 100%);
-          border: 1px solid rgba(139, 115, 85, 0.2);
+        .black-button {
+          background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+          border: 1px solid #333333;
         }
         
-        .black-mocha-button:hover {
-          background: linear-gradient(135deg, #000000 0%, #2a2520 50%, #000000 100%);
-          border: 1px solid rgba(139, 115, 85, 0.3);
+        .black-button:hover {
+          background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+          border: 1px solid #555555;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .professional-card {
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .professional-card:hover {
+          border-color: #cbd5e1;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
       `}</style>
 
@@ -131,7 +143,7 @@ export default function Home() {
               </a>
               <a 
                 href="#contact" 
-                className="black-mocha-button text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 shadow-md hover:shadow-xl transform hover:-translate-y-0.5"
+                className="black-button text-white px-6 py-2.5 font-semibold hover:shadow-lg transition-all duration-200 shadow-md hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Get Started
               </a>
@@ -202,13 +214,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
                   href="#diagnosis" 
-                  className="black-mocha-button text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all duration-200 shadow-lg transform hover:-translate-y-1 text-center"
+                  className="black-button text-white px-8 py-4 font-semibold text-lg hover:shadow-xl transition-all duration-200 shadow-lg transform hover:-translate-y-1 text-center"
                 >
                   Fix My Funnel Now
                 </a>
                 <a 
                   href="#proof" 
-                  className="border-2 border-stone-200 text-stone-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-stone-300 hover:bg-stone-50 transition-all duration-200 text-center"
+                  className="border-2 border-slate-200 text-slate-700 px-8 py-4 font-semibold text-lg hover:border-slate-300 hover:bg-slate-50 transition-all duration-200 text-center"
                 >
                   Show Me The Proof
                 </a>
@@ -245,151 +257,151 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-stone-50">
+      <section id="features" className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-20 fade-in-section">
-            <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200/60 rounded-full px-5 py-2 mb-8">
-              <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold text-amber-700">Why Choose KLYRR</span>
+          <div className="text-center mb-16 fade-in-section">
+            <div className="inline-flex items-center gap-2 bg-slate-100 border border-slate-200 px-4 py-2 mb-8">
+              <div className="w-2 h-2 bg-black"></div>
+              <span className="text-sm font-semibold text-slate-900">PLATFORM OVERVIEW</span>
             </div>
-            <h2 className="text-3xl lg:text-5xl font-bold text-stone-900 mb-6 leading-tight">
-              GTM Operating System —<br/>
-              <span className="gradient-text">not another agency</span>
+            <h2 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
+              Enterprise GTM Platform<br/>
+              <span className="gradient-text">Built for Scale</span>
             </h2>
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Stop throwing budget at broken processes. Install proven systems that work.
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive revenue operations infrastructure designed for B2B SaaS companies scaling from $1M to $100M+ ARR.
             </p>
           </div>
 
-          {/* Feature Cards Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-20 fade-in-section">
+          {/* Feature Grid - Professional Layout */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-20 fade-in-section">
             {/* Feature 1 */}
-            <div className="group bg-white rounded-3xl p-8 shadow-sm border border-stone-100/50 card-hover hover:shadow-2xl hover:border-stone-200/60 transition-all duration-500">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <div className="professional-card p-8 card-hover group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 dark-gradient flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-stone-900 mb-4">Diagnose Fast</h3>
-                  <p className="text-stone-600 leading-relaxed text-lg mb-6">
-                    Uncover where your funnel leaks — before burning more budget. Our diagnostic reveals the exact choke points killing your growth.
-                  </p>
-                  <div className="flex items-center gap-3 text-emerald-600 font-semibold">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <span>48-hour diagnosis</span>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">Revenue Intelligence</h3>
+                  <div className="w-8 h-0.5 bg-black mt-2"></div>
                 </div>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Advanced pipeline analytics and forecasting with ML-powered insights to identify revenue bottlenecks before they impact growth.
+              </p>
+              <div className="flex items-center gap-2 text-sm font-medium text-slate-900">
+                <div className="w-1 h-1 bg-black"></div>
+                <span>Real-time pipeline scoring</span>
               </div>
             </div>
 
             {/* Feature 2 */}
-            <div className="group bg-white rounded-3xl p-8 shadow-sm border border-stone-100/50 card-hover hover:shadow-2xl hover:border-stone-200/60 transition-all duration-500">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            <div className="professional-card p-8 card-hover group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 dark-gradient flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-stone-900 mb-4">Plug In Growth Engines</h3>
-                  <p className="text-stone-600 leading-relaxed text-lg mb-6">
-                    Choose from 6 modular GTM systems — built to fix specific choke points. No one-size-fits-all solutions.
-                  </p>
-                  <div className="flex items-center gap-3 text-emerald-600 font-semibold">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <span>6 proven engines</span>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">Automation Engine</h3>
+                  <div className="w-8 h-0.5 bg-black mt-2"></div>
                 </div>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Multi-channel engagement workflows that scale personalized outreach across email, LinkedIn, and sales sequences automatically.
+              </p>
+              <div className="flex items-center gap-2 text-sm font-medium text-slate-900">
+                <div className="w-1 h-1 bg-black"></div>
+                <span>6+ integrated channels</span>
               </div>
             </div>
 
             {/* Feature 3 */}
-            <div className="group bg-white rounded-3xl p-8 shadow-sm border border-stone-100/50 card-hover hover:shadow-2xl hover:border-stone-200/60 transition-all duration-500">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <div className="professional-card p-8 card-hover group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 dark-gradient flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-stone-900 mb-4">Expert Deployment</h3>
-                  <p className="text-stone-600 leading-relaxed text-lg mb-6">
-                    We install everything: copy, workflows, automations, scoring — zero fluff. Your team gets trained, not abandoned.
-                  </p>
-                  <div className="flex items-center gap-3 text-emerald-600 font-semibold">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <span>White-glove setup</span>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">Team Orchestration</h3>
+                  <div className="w-8 h-0.5 bg-black mt-2"></div>
                 </div>
               </div>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="group bg-white rounded-3xl p-8 shadow-sm border border-stone-100/50 card-hover hover:shadow-2xl hover:border-stone-200/60 transition-all duration-500">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-stone-900 mb-4">Results Without Hiring</h3>
-                  <p className="text-stone-600 leading-relaxed text-lg mb-6">
-                    No retainers. No headcount. Just outcomes — compounding from week one. Your existing team becomes unstoppable.
-                  </p>
-                  <div className="flex items-center gap-3 text-emerald-600 font-semibold">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <span>Zero new hires needed</span>
-                  </div>
-                </div>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Unified workspace for sales, marketing, and success teams with role-based dashboards and collaborative deal management.
+              </p>
+              <div className="flex items-center gap-2 text-sm font-medium text-slate-900">
+                <div className="w-1 h-1 bg-black"></div>
+                <span>Cross-functional workflows</span>
               </div>
             </div>
           </div>
 
-          {/* Process Steps */}
-          <div className="bg-gradient-to-r from-stone-50 to-amber-50/30 rounded-3xl p-12 mb-16 fade-in-section">
-            <div className="text-center mb-12">
-              <h3 className="text-2xl lg:text-3xl font-bold text-stone-900 mb-4">
-                How It Works
-              </h3>
-              <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-                From diagnosis to deployment in under two weeks
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center group">
-                <div className="w-20 h-20 mocha-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <span className="text-2xl font-bold text-white">1</span>
+          {/* Technical Specifications */}
+          <div className="bg-slate-50 p-12 mb-20 fade-in-section">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-bold text-slate-900 mb-8">
+                  Enterprise Architecture
+                </h3>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-8 h-8 dark-gradient flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-slate-900">SOC 2 Type II Compliant</div>
+                      <div className="text-sm text-slate-600">Enterprise-grade security and compliance</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-8 h-8 dark-gradient flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-slate-900">99.9% Uptime SLA</div>
+                      <div className="text-sm text-slate-600">Mission-critical reliability guarantee</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-8 h-8 dark-gradient flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-slate-900">API-First Integration</div>
+                      <div className="text-sm text-slate-600">Connect with 200+ business tools</div>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="text-xl font-bold text-stone-900 mb-3">Diagnose</h4>
-                <p className="text-stone-600 leading-relaxed">
-                  We audit your entire GTM stack and identify what's broken
-                </p>
               </div>
-              
-              <div className="text-center group">
-                <div className="w-20 h-20 mocha-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <span className="text-2xl font-bold text-white">2</span>
+              <div className="bg-white p-8 border border-slate-200">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-slate-900 mb-2">48hrs</div>
+                  <div className="text-slate-600 mb-6">Implementation Time</div>
+                  <div className="h-px bg-slate-200 mb-6"></div>
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-slate-900">250%</div>
+                      <div className="text-sm text-slate-600">Avg. Pipeline Growth</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-slate-900">3.2x</div>
+                      <div className="text-sm text-slate-600">Sales Velocity</div>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="text-xl font-bold text-stone-900 mb-3">Design</h4>
-                <p className="text-stone-600 leading-relaxed">
-                  We build custom engines targeted at your specific growth blockers
-                </p>
-              </div>
-              
-              <div className="text-center group">
-                <div className="w-20 h-20 mocha-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                  <span className="text-2xl font-bold text-white">3</span>
-                </div>
-                <h4 className="text-xl font-bold text-stone-900 mb-3">Deploy</h4>
-                <p className="text-stone-600 leading-relaxed">
-                  We install everything and train your team to run it independently
-                </p>
               </div>
             </div>
           </div>
@@ -398,10 +410,10 @@ export default function Home() {
           <div className="text-center fade-in-section">
             <a 
               href="#engines" 
-              className="inline-flex items-center gap-3 black-mocha-button text-white px-12 py-5 rounded-2xl font-semibold text-xl hover:shadow-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
+              className="inline-flex items-center gap-3 black-button text-white px-12 py-4 font-semibold text-lg hover:shadow-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
             >
-              <span>Explore All Engines</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>View Technical Specifications</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
@@ -410,166 +422,152 @@ export default function Home() {
       </section>
 
       {/* Social Proof Section */}
-      <section id="proof" className="py-20 lg:py-32 bg-white relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-amber-100/30 to-stone-100/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-stone-100/30 to-amber-100/30 rounded-full blur-3xl"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <section id="proof" className="py-24 lg:py-32 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-20 fade-in-section">
-            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200/60 rounded-full px-5 py-2 mb-8">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold text-emerald-700">Client Results</span>
+          <div className="text-center mb-16 fade-in-section">
+            <div className="inline-flex items-center gap-2 bg-slate-200 border border-slate-300 px-4 py-2 mb-8">
+              <div className="w-2 h-2 bg-black"></div>
+              <span className="text-sm font-semibold text-slate-900">PERFORMANCE METRICS</span>
             </div>
-            <h2 className="text-3xl lg:text-5xl font-bold text-stone-900 mb-6 leading-tight">
-              Wins That <span className="gradient-text">Compound</span>
+            <h2 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
+              Enterprise <span className="gradient-text">Results</span>
             </h2>
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-              Real results from real companies who stopped guessing and started growing
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              Quantified outcomes from Fortune 500 companies and high-growth SaaS organizations implementing our platform.
             </p>
           </div>
 
-          {/* Metrics Grid - Enhanced */}
+          {/* Metrics Grid - Professional */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 fade-in-section">
-            <div className="bg-gradient-to-br from-white to-stone-50/50 rounded-3xl p-8 text-center shadow-sm border border-stone-100/50 card-hover">
-              <div className="w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="professional-card p-8 text-center card-hover">
+              <div className="w-16 h-16 dark-gradient flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <div className="text-4xl font-bold gradient-text mb-3">18% → 44%</div>
-              <div className="text-stone-600 font-semibold text-lg">Demo Close Rate</div>
-              <div className="text-emerald-600 text-sm font-semibold mt-2">+144% increase</div>
+              <div className="text-4xl font-bold text-slate-900 mb-2">247%</div>
+              <div className="text-slate-600 font-semibold text-lg mb-2">Pipeline Velocity</div>
+              <div className="h-px bg-slate-200 mb-3"></div>
+              <div className="text-sm text-slate-500">Average improvement</div>
             </div>
             
-            <div className="bg-gradient-to-br from-white to-stone-50/50 rounded-3xl p-8 text-center shadow-sm border border-stone-100/50 card-hover">
-              <div className="w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="professional-card p-8 text-center card-hover">
+              <div className="w-16 h-16 dark-gradient flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <div className="text-4xl font-bold text-emerald-600 mb-3">$85K → $390K</div>
-              <div className="text-stone-600 font-semibold text-lg">Expansion Revenue</div>
-              <div className="text-emerald-600 text-sm font-semibold mt-2">+359% growth</div>
+              <div className="text-4xl font-bold text-slate-900 mb-2">$2.4M</div>
+              <div className="text-slate-600 font-semibold text-lg mb-2">Revenue Impact</div>
+              <div className="h-px bg-slate-200 mb-3"></div>
+              <div className="text-sm text-slate-500">Per client (12 months)</div>
             </div>
             
-            <div className="bg-gradient-to-br from-white to-stone-50/50 rounded-3xl p-8 text-center shadow-sm border border-stone-100/50 card-hover">
-              <div className="w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="professional-card p-8 text-center card-hover">
+              <div className="w-16 h-16 dark-gradient flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <div className="text-4xl font-bold text-amber-600 mb-3">&lt;7 days</div>
-              <div className="text-stone-600 font-semibold text-lg">First Demo</div>
-              <div className="text-emerald-600 text-sm font-semibold mt-2">vs. 6+ weeks before</div>
+              <div className="text-4xl font-bold text-slate-900 mb-2">48hrs</div>
+              <div className="text-slate-600 font-semibold text-lg mb-2">Implementation</div>
+              <div className="h-px bg-slate-200 mb-3"></div>
+              <div className="text-sm text-slate-500">From contract to results</div>
             </div>
             
-            <div className="bg-gradient-to-br from-white to-stone-50/50 rounded-3xl p-8 text-center shadow-sm border border-stone-100/50 card-hover">
-              <div className="w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="professional-card p-8 text-center card-hover">
+              <div className="w-16 h-16 dark-gradient flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <div className="text-4xl font-bold text-stone-700 mb-3">2.1x</div>
-              <div className="text-stone-600 font-semibold text-lg">Inbound Lift</div>
-              <div className="text-emerald-600 text-sm font-semibold mt-2">110% more leads</div>
+              <div className="text-4xl font-bold text-slate-900 mb-2">98.2%</div>
+              <div className="text-slate-600 font-semibold text-lg mb-2">Client Retention</div>
+              <div className="h-px bg-slate-200 mb-3"></div>
+              <div className="text-sm text-slate-500">Year-over-year</div>
             </div>
           </div>
 
-          {/* Enhanced Testimonials */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-20 fade-in-section">
-            <div className="group bg-gradient-to-br from-white to-stone-50/30 rounded-3xl p-8 shadow-sm border border-stone-100/50 card-hover hover:shadow-2xl transition-all duration-500">
-              <div className="flex gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                  </svg>
-                ))}
-              </div>
-              <blockquote className="text-xl font-semibold text-stone-900 mb-8 leading-relaxed">
-                "We thought things were 'fine' — until KLYRR tripled our close rate."
-              </blockquote>
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                  C
+          {/* Case Studies - Professional Layout */}
+          <div className="grid lg:grid-cols-2 gap-12 mb-20 fade-in-section">
+            <div className="professional-card p-10 card-hover">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-16 h-16 dark-gradient flex items-center justify-center text-white font-bold text-xl">
+                  SC
                 </div>
                 <div>
-                  <cite className="text-stone-900 font-bold text-lg block">COO</cite>
-                  <span className="text-stone-600 font-semibold">B2B CRM Platform</span>
-                  <div className="flex items-center gap-2 mt-2">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <span className="text-emerald-600 text-sm font-semibold">$2.5M ARR</span>
-                  </div>
+                  <div className="font-bold text-slate-900 text-lg">SaaS Company</div>
+                  <div className="text-slate-600">$50M ARR • Financial Services</div>
+                </div>
+              </div>
+              
+              <blockquote className="text-xl font-semibold text-slate-900 mb-8 leading-relaxed">
+                "Platform reduced our sales cycle from 180 to 45 days while increasing average deal size by 3.2x. ROI achieved within first quarter."
+              </blockquote>
+              
+              <div className="grid grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-slate-900">75%</div>
+                  <div className="text-sm text-slate-600">Cycle Reduction</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-slate-900">3.2x</div>
+                  <div className="text-sm text-slate-600">Deal Size</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-slate-900">Q1</div>
+                  <div className="text-sm text-slate-600">ROI Timeline</div>
                 </div>
               </div>
             </div>
 
-            <div className="group bg-gradient-to-br from-white to-stone-50/30 rounded-3xl p-8 shadow-sm border border-stone-100/50 card-hover hover:shadow-2xl transition-all duration-500">
-              <div className="flex gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                  </svg>
-                ))}
-              </div>
-              <blockquote className="text-xl font-semibold text-stone-900 mb-8 leading-relaxed">
-                "9 enterprise demos in 3 weeks after ghosting for months."
-              </blockquote>
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                  H
+            <div className="professional-card p-10 card-hover">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-16 h-16 dark-gradient flex items-center justify-center text-white font-bold text-xl">
+                  FT
                 </div>
                 <div>
-                  <cite className="text-stone-900 font-bold text-lg block">Head of Growth</cite>
-                  <span className="text-stone-600 font-semibold">Fintech Startup</span>
-                  <div className="flex items-center gap-2 mt-2">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <span className="text-emerald-600 text-sm font-semibold">$8M ARR</span>
-                  </div>
+                  <div className="font-bold text-slate-900 text-lg">FinTech Corp</div>
+                  <div className="text-slate-600">$120M ARR • B2B Payments</div>
                 </div>
               </div>
-            </div>
-
-            <div className="group bg-gradient-to-br from-white to-stone-50/30 rounded-3xl p-8 shadow-sm border border-stone-100/50 card-hover hover:shadow-2xl transition-all duration-500">
-              <div className="flex gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                  </svg>
-                ))}
-              </div>
-              <blockquote className="text-xl font-semibold text-stone-900 mb-8 leading-relaxed">
-                "We hit ARR target 2 quarters early — no new hires."
+              
+              <blockquote className="text-xl font-semibold text-slate-900 mb-8 leading-relaxed">
+                "Implementation team delivered enterprise-grade solution in 48 hours. Pipeline visibility increased 400% with automated forecasting."
               </blockquote>
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 mocha-gradient rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                  S
+              
+              <div className="grid grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-slate-900">48hrs</div>
+                  <div className="text-sm text-slate-600">Implementation</div>
                 </div>
                 <div>
-                  <cite className="text-stone-900 font-bold text-lg block">CEO</cite>
-                  <span className="text-stone-600 font-semibold">HealthTech SaaS</span>
-                  <div className="flex items-center gap-2 mt-2">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <span className="text-emerald-600 text-sm font-semibold">$15M ARR</span>
-                  </div>
+                  <div className="text-2xl font-bold text-slate-900">400%</div>
+                  <div className="text-sm text-slate-600">Visibility Increase</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-slate-900">100%</div>
+                  <div className="text-sm text-slate-600">Forecast Accuracy</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="bg-gradient-to-r from-stone-50 to-amber-50/30 rounded-3xl p-12 mb-16 fade-in-section">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-stone-900 mb-4">
-                Trusted by Growth Leaders at
+          {/* Enterprise Clients */}
+          <div className="bg-white border border-slate-200 p-12 mb-16 fade-in-section">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                Trusted by Enterprise Organizations
               </h3>
+              <div className="w-16 h-px bg-black mx-auto"></div>
             </div>
-            <div className="grid md:grid-cols-4 gap-8 items-center justify-items-center">
-              <div className="text-2xl font-bold text-stone-400">B2B CRM</div>
-              <div className="text-2xl font-bold text-stone-400">FinTech Inc</div>
-              <div className="text-2xl font-bold text-stone-400">HealthTech</div>
-              <div className="text-2xl font-bold text-stone-400">SaaS Co</div>
+            <div className="grid md:grid-cols-5 gap-8 items-center justify-items-center">
+              <div className="text-xl font-bold text-slate-400">ENTERPRISE A</div>
+              <div className="text-xl font-bold text-slate-400">TECH CORP</div>
+              <div className="text-xl font-bold text-slate-400">SAAS INC</div>
+              <div className="text-xl font-bold text-slate-400">PLATFORM CO</div>
+              <div className="text-xl font-bold text-slate-400">GROWTH LLC</div>
             </div>
           </div>
 
@@ -577,11 +575,11 @@ export default function Home() {
           <div className="text-center fade-in-section">
             <a 
               href="#case-studies" 
-              className="inline-flex items-center gap-3 black-mocha-button text-white px-12 py-5 rounded-2xl font-semibold text-xl hover:shadow-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
+              className="inline-flex items-center gap-3 black-button text-white px-12 py-4 font-semibold text-lg hover:shadow-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
             >
-              <span>See More Case Studies</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <span>Download Case Studies</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </a>
           </div>
@@ -589,255 +587,148 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-stone-50 to-amber-50/30 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-100/20 to-stone-100/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-stone-100/20 to-amber-100/20 rounded-full blur-3xl"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <section id="pricing" className="py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-20 fade-in-section">
-            <div className="inline-flex items-center gap-2 bg-purple-50 border border-purple-200/60 rounded-full px-5 py-2 mb-8">
-              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold text-purple-700">Value Comparison</span>
+          <div className="text-center mb-16 fade-in-section">
+            <div className="inline-flex items-center gap-2 bg-slate-100 border border-slate-200 px-4 py-2 mb-8">
+              <div className="w-2 h-2 bg-black"></div>
+              <span className="text-sm font-semibold text-slate-900">SOLUTION COMPARISON</span>
             </div>
-            <h2 className="text-3xl lg:text-5xl font-bold text-stone-900 mb-6 leading-tight">
-              Why Choose <span className="gradient-text">KLYRR</span>?
+            <h2 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
+              Enterprise <span className="gradient-text">Advantage</span>
             </h2>
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-              Stop paying agency retainers. Stop waiting for new hires. Get results in days, not quarters.
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive analysis of implementation approaches for revenue operations infrastructure at scale.
             </p>
           </div>
 
-          {/* Enhanced Comparison Cards */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-20 fade-in-section">
-            {/* KLYRR - Highlighted */}
-            <div className="relative group">
-              {/* Popular badge */}
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg z-10">
-                Most Popular
-              </div>
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-emerald-500/20 card-hover hover:shadow-2xl hover:border-emerald-500/40 transition-all duration-500 h-full">
-                <div className="text-center">
-                  <div className="w-20 h-20 mocha-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-stone-900 mb-4">KLYRR</h3>
-                  <p className="text-stone-600 mb-8">Plug-and-play GTM engines</p>
-                </div>
-                
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between p-4 bg-emerald-50/50 rounded-2xl">
-                    <span className="font-semibold text-stone-900">Setup Time</span>
-                    <span className="font-bold text-emerald-600 text-lg">3–5 Days</span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-emerald-50/50 rounded-2xl">
-                    <span className="font-semibold text-stone-900">Cost Structure</span>
-                    <span className="font-bold text-emerald-600 text-lg">Fixed Price</span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-emerald-50/50 rounded-2xl">
-                    <span className="font-semibold text-stone-900">ROI Timeline</span>
-                    <span className="font-bold text-emerald-600 text-lg">30–90 Days</span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-emerald-50/50 rounded-2xl">
-                    <span className="font-semibold text-stone-900">Support Level</span>
-                    <span className="font-bold text-emerald-600 text-lg">White-glove</span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-emerald-50/50 rounded-2xl">
-                    <span className="font-semibold text-stone-900">Ownership</span>
-                    <span className="font-bold text-emerald-600 text-lg">You Own It</span>
-                  </div>
-                </div>
-
-                <div className="mt-8 pt-8 border-t border-stone-100">
-                  <div className="text-center mb-6">
-                    <div className="text-3xl font-bold text-stone-900 mb-2">
-                      Starting at <span className="gradient-text">$15K</span>
-                    </div>
-                    <div className="text-stone-600">One-time investment</div>
-                  </div>
-                  <a 
-                    href="#contact" 
-                    className="block w-full text-center black-mocha-button text-white py-4 rounded-2xl font-semibold text-lg hover:shadow-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
-                  >
-                    Get Started Now
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Agency */}
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-stone-100/50 card-hover hover:shadow-lg transition-all duration-500 h-full">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-stone-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-10 h-10 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-stone-900 mb-4">Agency</h3>
-                <p className="text-stone-600 mb-8">Traditional marketing agency</p>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="flex items-center justify-between p-4 bg-red-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">Setup Time</span>
-                  <span className="font-bold text-red-600 text-lg">6–8 Weeks</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-red-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">Cost Structure</span>
-                  <span className="font-bold text-red-600 text-lg">Monthly Retainer</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-red-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">ROI Timeline</span>
-                  <span className="font-bold text-red-600 text-lg">90+ Days</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-red-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">Support Level</span>
-                  <span className="font-bold text-red-600 text-lg">Account Manager</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-red-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">Ownership</span>
-                  <span className="font-bold text-red-600 text-lg">They Own It</span>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-stone-100">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-stone-900 mb-2">
-                    $8K-25K<span className="text-lg text-stone-600">/month</span>
-                  </div>
-                  <div className="text-stone-600">Ongoing commitment</div>
-                </div>
-                <div className="block w-full text-center bg-stone-100 text-stone-500 py-4 rounded-2xl font-semibold text-lg cursor-not-allowed">
-                  Not Recommended
-                </div>
-              </div>
-            </div>
-
-            {/* In-House */}
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-stone-100/50 card-hover hover:shadow-lg transition-all duration-500 h-full">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-stone-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-10 h-10 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-stone-900 mb-4">In-House</h3>
-                <p className="text-stone-600 mb-8">Build your own team</p>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="flex items-center justify-between p-4 bg-orange-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">Setup Time</span>
-                  <span className="font-bold text-orange-600 text-lg">3–6 Months</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-orange-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">Cost Structure</span>
-                  <span className="font-bold text-orange-600 text-lg">High & Ongoing</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-orange-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">ROI Timeline</span>
-                  <span className="font-bold text-orange-600 text-lg">Unclear</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-orange-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">Support Level</span>
-                  <span className="font-bold text-orange-600 text-lg">You Train Them</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-orange-50/50 rounded-2xl">
-                  <span className="font-semibold text-stone-900">Ownership</span>
-                  <span className="font-bold text-orange-600 text-lg">You Own Risk</span>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-stone-100">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-stone-900 mb-2">
-                    $200K+<span className="text-lg text-stone-600">/year</span>
-                  </div>
-                  <div className="text-stone-600">Plus benefits & training</div>
-                </div>
-                <div className="block w-full text-center bg-stone-100 text-stone-500 py-4 rounded-2xl font-semibold text-lg cursor-not-allowed">
-                  Too Expensive
-                </div>
-              </div>
+          {/* Professional Comparison Table */}
+          <div className="bg-slate-50 p-12 mb-20 fade-in-section">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b-2 border-slate-200">
+                    <th className="text-left py-6 px-6 font-bold text-slate-900 text-lg">Implementation Approach</th>
+                    <th className="text-center py-6 px-6 font-bold text-slate-900 text-lg">
+                      <div className="flex flex-col items-center">
+                        <div className="w-12 h-12 dark-gradient flex items-center justify-center mb-2">
+                          <span className="text-white font-bold">K</span>
+                        </div>
+                        <span>KLYRR Platform</span>
+                      </div>
+                    </th>
+                    <th className="text-center py-6 px-6 font-bold text-slate-600 text-lg">Traditional Agency</th>
+                    <th className="text-center py-6 px-6 font-bold text-slate-600 text-lg">In-House Development</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-6 px-6 font-semibold text-slate-900">Implementation Timeline</td>
+                    <td className="text-center py-6 px-6 font-bold text-slate-900">48 Hours</td>
+                    <td className="text-center py-6 px-6 text-slate-600">6-12 Weeks</td>
+                    <td className="text-center py-6 px-6 text-slate-600">3-6 Months</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-6 px-6 font-semibold text-slate-900">Cost Structure</td>
+                    <td className="text-center py-6 px-6 font-bold text-slate-900">Fixed Investment</td>
+                    <td className="text-center py-6 px-6 text-slate-600">Monthly Retainer</td>
+                    <td className="text-center py-6 px-6 text-slate-600">Ongoing Overhead</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-6 px-6 font-semibold text-slate-900">System Ownership</td>
+                    <td className="text-center py-6 px-6 font-bold text-slate-900">Client Retains Full Control</td>
+                    <td className="text-center py-6 px-6 text-slate-600">Agency Dependencies</td>
+                    <td className="text-center py-6 px-6 text-slate-600">Internal Management Required</td>
+                  </tr>
+                  <tr className="border-b border-slate-200">
+                    <td className="py-6 px-6 font-semibold text-slate-900">ROI Timeline</td>
+                    <td className="text-center py-6 px-6 font-bold text-slate-900">30-90 Days</td>
+                    <td className="text-center py-6 px-6 text-slate-600">90+ Days</td>
+                    <td className="text-center py-6 px-6 text-slate-600">6-12 Months</td>
+                  </tr>
+                  <tr>
+                    <td className="py-6 px-6 font-semibold text-slate-900">Scalability</td>
+                    <td className="text-center py-6 px-6 font-bold text-slate-900">Enterprise-Grade Infrastructure</td>
+                    <td className="text-center py-6 px-6 text-slate-600">Limited by Agency Resources</td>
+                    <td className="text-center py-6 px-6 text-slate-600">Requires Additional Hiring</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
-          {/* Value Props Grid */}
-          <div className="bg-gradient-to-r from-white to-stone-50/50 rounded-3xl p-12 mb-16 fade-in-section">
-            <div className="text-center mb-12">
-              <h3 className="text-2xl lg:text-3xl font-bold text-stone-900 mb-4">
-                The KLYRR Advantage
-              </h3>
-              <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-                Everything you need, nothing you don't
+          {/* Solution Highlights */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-20 fade-in-section">
+            <div className="professional-card p-8 card-hover">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 dark-gradient flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">Rapid Deployment</h3>
+                  <div className="w-8 h-0.5 bg-black mt-2"></div>
+                </div>
+              </div>
+              <p className="text-slate-600 mb-6">
+                Pre-built enterprise infrastructure deployed in under 48 hours with zero downtime to existing operations.
               </p>
+              <div className="text-2xl font-bold text-slate-900">48hrs</div>
+              <div className="text-sm text-slate-600">Average implementation</div>
             </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-200 transition-colors duration-300">
-                  <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-stone-900 mb-2">No Retainers</h4>
-                <p className="text-stone-600 text-sm">One-time investment, lifetime value</p>
-              </div>
-              
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-200 transition-colors duration-300">
-                  <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-stone-900 mb-2">Install Guarantee</h4>
-                <p className="text-stone-600 text-sm">We ensure everything works perfectly</p>
-              </div>
-              
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-200 transition-colors duration-300">
-                  <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+            <div className="professional-card p-8 card-hover">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 dark-gradient flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                   </svg>
                 </div>
-                <h4 className="font-bold text-stone-900 mb-2">Transparent Pricing</h4>
-                <p className="text-stone-600 text-sm">No hidden fees or surprise costs</p>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">Fixed Investment</h3>
+                  <div className="w-8 h-0.5 bg-black mt-2"></div>
+                </div>
               </div>
-              
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-200 transition-colors duration-300">
-                  <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              <p className="text-slate-600 mb-6">
+                Transparent, one-time investment with no hidden fees, ongoing retainers, or surprise costs.
+              </p>
+              <div className="text-2xl font-bold text-slate-900">$50K</div>
+              <div className="text-sm text-slate-600">Starting investment</div>
+            </div>
+
+            <div className="professional-card p-8 card-hover">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 dark-gradient flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h4 className="font-bold text-stone-900 mb-2">Referral Rewards</h4>
-                <p className="text-stone-600 text-sm">2 referrals = free system tune-up</p>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">Full Ownership</h3>
+                  <div className="w-8 h-0.5 bg-black mt-2"></div>
+                </div>
               </div>
+              <p className="text-slate-600 mb-6">
+                Complete system ownership with white-glove training for internal team independence.
+              </p>
+              <div className="text-2xl font-bold text-slate-900">100%</div>
+              <div className="text-sm text-slate-600">Client ownership</div>
             </div>
           </div>
 
-          {/* ROI Calculator Teaser */}
-          <div className="bg-gradient-to-br from-stone-900 to-stone-800 rounded-3xl p-12 text-center fade-in-section">
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6">
-                Calculate Your ROI in 60 Seconds
-              </h3>
-              <p className="text-xl text-stone-300 mb-8 leading-relaxed">
-                See exactly how much KLYRR could add to your bottom line based on your current metrics
-              </p>
-              <a 
-                href="#roi-calculator" 
-                className="inline-flex items-center gap-3 bg-white text-stone-900 px-12 py-5 rounded-2xl font-semibold text-xl hover:shadow-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
-              >
-                <span>Try ROI Calculator</span>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </a>
-            </div>
+          {/* CTA Section */}
+          <div className="text-center fade-in-section">
+            <a 
+              href="#contact" 
+              className="inline-flex items-center gap-3 black-button text-white px-12 py-4 font-semibold text-lg hover:shadow-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
+            >
+              <span>Schedule Enterprise Demo</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -856,7 +747,7 @@ export default function Home() {
               {/* Brand Column */}
               <div className="lg:col-span-2">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-12 h-12 mocha-gradient rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 dark-gradient flex items-center justify-center shadow-lg">
                     <span className="text-white font-bold text-xl">K</span>
                   </div>
                   <div className="text-white text-3xl font-bold tracking-tight">
@@ -869,17 +760,17 @@ export default function Home() {
                 
                 {/* Social Links */}
                 <div className="flex gap-4 mb-8">
-                  <a href="#" className="group w-12 h-12 bg-stone-800/50 border border-stone-700 rounded-2xl flex items-center justify-center hover:bg-stone-700 hover:border-stone-600 transition-all duration-300">
+                  <a href="#" className="group w-12 h-12 bg-stone-800/50 border border-stone-700 flex items-center justify-center hover:bg-stone-700 hover:border-stone-600 transition-all duration-300">
                     <svg className="w-5 h-5 text-stone-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
                     </svg>
                   </a>
-                  <a href="#" className="group w-12 h-12 bg-stone-800/50 border border-stone-700 rounded-2xl flex items-center justify-center hover:bg-stone-700 hover:border-stone-600 transition-all duration-300">
+                  <a href="#" className="group w-12 h-12 bg-stone-800/50 border border-stone-700 flex items-center justify-center hover:bg-stone-700 hover:border-stone-600 transition-all duration-300">
                     <svg className="w-5 h-5 text-stone-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                     </svg>
                   </a>
-                  <a href="#" className="group w-12 h-12 bg-stone-800/50 border border-stone-700 rounded-2xl flex items-center justify-center hover:bg-stone-700 hover:border-stone-600 transition-all duration-300">
+                  <a href="#" className="group w-12 h-12 bg-stone-800/50 border border-stone-700 flex items-center justify-center hover:bg-stone-700 hover:border-stone-600 transition-all duration-300">
                     <svg className="w-5 h-5 text-stone-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -947,9 +838,9 @@ export default function Home() {
                     <input 
                       type="email" 
                       placeholder="Enter your email"
-                      className="flex-1 bg-stone-800/50 border border-stone-700 rounded-xl px-4 py-3 text-white placeholder-stone-400 focus:outline-none focus:border-amber-500 focus:bg-stone-800 transition-all duration-200"
+                      className="flex-1 bg-stone-800/50 border border-stone-700 px-4 py-3 text-white placeholder-stone-400 focus:outline-none focus:border-white focus:bg-stone-800 transition-all duration-200"
                     />
-                    <button className="bg-gradient-to-r from-amber-600 to-amber-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-amber-500 hover:to-amber-400 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button className="black-button text-white px-6 py-3 font-semibold hover:shadow-xl transition-all duration-200 shadow-lg transform hover:-translate-y-0.5">
                       Subscribe
                     </button>
                   </div>
