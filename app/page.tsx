@@ -179,9 +179,9 @@ export default function Home() {
             {/* Left Content */}
             <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-slate-50 border border-gray-700/60 rounded-full px-4 py-2 mb-8">
+              <div className="inline-flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-full px-4 py-2 mb-8">
                 <div className="w-2 h-2 navy-gradient rounded-full animate-pulse"></div>
-                <span className="text-sm font-semibold text-gray-200">GTM Operating System</span>
+                <span className="text-sm font-semibold text-slate-700">GTM Operating System</span>
               </div>
 
               {/* Main Headline */}
@@ -227,7 +227,7 @@ export default function Home() {
                 </a>
                 <a 
                   href="#proof" 
-                  className="border-2 border-gray-400 text-slate-500 px-8 py-4 font-semibold text-lg hover:border-gray-500 hover:bg-slate-50 transition-all duration-200 text-center"
+                  className="border-2 border-slate-400 text-slate-700 px-8 py-4 font-semibold text-lg hover:border-slate-500 hover:bg-slate-50 transition-all duration-200 text-center"
                 >
                   Show Me The Proof
                 </a>
@@ -389,11 +389,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-white p-8 border border-gray-700">
+              <div className="bg-white p-8 border border-slate-200 rounded-xl">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-slate-900 mb-2">48hrs</div>
                   <div className="text-slate-600 mb-6">Implementation Time</div>
-                  <div className="h-px bg-gray-700 mb-6"></div>
+                  <div className="h-px bg-slate-200 mb-6"></div>
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
                       <div className="text-2xl font-bold text-slate-900">250%</div>
@@ -429,9 +429,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16 fade-in-section">
-            <div className="inline-flex items-center gap-2 bg-gray-700 border border-gray-600 px-4 py-2 mb-8">
-              <div className="w-2 h-2 navy-gradient"></div>
-              <span className="text-sm font-semibold text-gray-200">PERFORMANCE METRICS</span>
+            <div className="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 rounded-full px-4 py-2 mb-8">
+              <div className="w-2 h-2 navy-gradient rounded-full"></div>
+              <span className="text-sm font-semibold text-white">PERFORMANCE METRICS</span>
             </div>
             <h2 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
               Enterprise <span className="gradient-text">Results</span>
@@ -451,7 +451,7 @@ export default function Home() {
               </div>
               <div className="text-4xl font-bold text-slate-900 mb-2">247%</div>
               <div className="text-slate-600 font-semibold text-lg mb-2">Pipeline Velocity</div>
-              <div className="h-px bg-gray-700 mb-3"></div>
+              <div className="h-px bg-slate-200 mb-3"></div>
               <div className="text-sm text-slate-600">Average improvement</div>
             </div>
             
@@ -463,7 +463,7 @@ export default function Home() {
               </div>
               <div className="text-4xl font-bold text-slate-900 mb-2">$2.4M</div>
               <div className="text-slate-600 font-semibold text-lg mb-2">Revenue Impact</div>
-              <div className="h-px bg-gray-700 mb-3"></div>
+              <div className="h-px bg-slate-200 mb-3"></div>
               <div className="text-sm text-slate-600">Per client (12 months)</div>
             </div>
             
@@ -475,7 +475,7 @@ export default function Home() {
               </div>
               <div className="text-4xl font-bold text-slate-900 mb-2">48hrs</div>
               <div className="text-slate-600 font-semibold text-lg mb-2">Implementation</div>
-              <div className="h-px bg-gray-700 mb-3"></div>
+              <div className="h-px bg-slate-200 mb-3"></div>
               <div className="text-sm text-slate-600">From contract to results</div>
             </div>
             
@@ -487,7 +487,7 @@ export default function Home() {
               </div>
               <div className="text-4xl font-bold text-slate-900 mb-2">98.2%</div>
               <div className="text-slate-600 font-semibold text-lg mb-2">Client Retention</div>
-              <div className="h-px bg-gray-700 mb-3"></div>
+              <div className="h-px bg-slate-200 mb-3"></div>
               <div className="text-sm text-slate-600">Year-over-year</div>
             </div>
           </div>
@@ -558,7 +558,7 @@ export default function Home() {
           </div>
 
           {/* Enterprise Clients */}
-          <div className="bg-white border border-gray-700 p-12 mb-16 fade-in-section">
+          <div className="bg-white border border-slate-200 rounded-xl p-12 mb-16 fade-in-section">
             <div className="text-center mb-12">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
                 Trusted by Enterprise Organizations
@@ -594,9 +594,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16 fade-in-section">
-            <div className="inline-flex items-center gap-2 bg-slate-50 border border-gray-700 px-4 py-2 mb-8">
-              <div className="w-2 h-2 navy-gradient"></div>
-              <span className="text-sm font-semibold text-gray-200">SOLUTION COMPARISON</span>
+            <div className="inline-flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-full px-4 py-2 mb-8">
+              <div className="w-2 h-2 navy-gradient rounded-full"></div>
+              <span className="text-sm font-semibold text-slate-700">SOLUTION COMPARISON</span>
             </div>
             <h2 className="text-4xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
               Enterprise <span className="gradient-text">Advantage</span>
@@ -611,7 +611,7 @@ export default function Home() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b-2 border-gray-700">
+                  <tr className="border-b-2 border-slate-200">
                     <th className="text-left py-6 px-6 font-bold text-slate-900 text-lg">Implementation Approach</th>
                     <th className="text-center py-6 px-6 font-bold text-slate-900 text-lg">
                       <div className="flex flex-col items-center">
@@ -626,25 +626,25 @@ export default function Home() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-gray-700">
+                  <tr className="border-b border-slate-200">
                     <td className="py-6 px-6 font-semibold text-slate-900">Implementation Timeline</td>
                     <td className="text-center py-6 px-6 font-bold text-slate-900">48 Hours</td>
                     <td className="text-center py-6 px-6 text-slate-600">6-12 Weeks</td>
                     <td className="text-center py-6 px-6 text-slate-600">3-6 Months</td>
                   </tr>
-                  <tr className="border-b border-gray-700">
+                  <tr className="border-b border-slate-200">
                     <td className="py-6 px-6 font-semibold text-slate-900">Cost Structure</td>
                     <td className="text-center py-6 px-6 font-bold text-slate-900">Fixed Investment</td>
                     <td className="text-center py-6 px-6 text-slate-600">Monthly Retainer</td>
                     <td className="text-center py-6 px-6 text-slate-600">Ongoing Overhead</td>
                   </tr>
-                  <tr className="border-b border-gray-700">
+                  <tr className="border-b border-slate-200">
                     <td className="py-6 px-6 font-semibold text-slate-900">System Ownership</td>
                     <td className="text-center py-6 px-6 font-bold text-slate-900">Client Retains Full Control</td>
                     <td className="text-center py-6 px-6 text-slate-600">Agency Dependencies</td>
                     <td className="text-center py-6 px-6 text-slate-600">Internal Management Required</td>
                   </tr>
-                  <tr className="border-b border-gray-700">
+                  <tr className="border-b border-slate-200">
                     <td className="py-6 px-6 font-semibold text-slate-900">ROI Timeline</td>
                     <td className="text-center py-6 px-6 font-bold text-slate-900">30-90 Days</td>
                     <td className="text-center py-6 px-6 text-slate-600">90+ Days</td>
@@ -737,10 +737,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative overflow-hidden" style={{background: 'linear-gradient(135deg, #000000 0%, #1f2937 50%, #4f46e5 100%)'}}>
+      <footer className="relative overflow-hidden" style={{background: 'linear-gradient(135deg, #000000 0%, #000000 70%, #1f2937 85%, #4f46e5 100%)'}}>
         {/* Background decoration */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-indigo-500/5 to-purple-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-600/5 to-indigo-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-indigo-500/3 to-purple-600/3 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-600/3 to-indigo-500/3 rounded-full blur-3xl"></div>
         
         <div className="relative py-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
