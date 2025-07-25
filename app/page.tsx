@@ -63,7 +63,7 @@ export default function Home() {
         }
         
         .gradient-text {
-          background: linear-gradient(135deg, #1e40af 0%, #3b82f6 30%, #60a5fa 60%, #1e3a8a 100%);
+          background: linear-gradient(135deg, #000000 0%, #000000 70%, #1f2937 85%, #4f46e5 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -83,11 +83,11 @@ export default function Home() {
         }
         
         .navy-gradient {
-          background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #1e40af 100%);
+          background: linear-gradient(135deg, #000000 0%, #1f2937 30%, #4f46e5 70%, #6366f1 100%);
         }
         
         .blue-gradient {
-          background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
+          background: linear-gradient(135deg, #000000 0%, #1f2937 30%, #4f46e5 70%, #6366f1 100%);
         }
         
         .slate-gradient {
@@ -95,14 +95,14 @@ export default function Home() {
         }
         
         .blue-button {
-          background: linear-gradient(135deg, #000000 0%, #1f2937 50%, #4f46e5 100%);
+          background: linear-gradient(135deg, #000000 0%, #000000 60%, #1f2937 80%, #4f46e5 100%);
           border: none;
           color: #ffffff !important;
           font-weight: 600;
         }
         
         .blue-button:hover {
-          background: linear-gradient(135deg, #111827 0%, #374151 50%, #6366f1 100%);
+          background: linear-gradient(135deg, #111827 0%, #111827 60%, #374151 80%, #6366f1 100%);
           border: none;
           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
           transform: translateY(-1px);
@@ -120,6 +120,13 @@ export default function Home() {
           border-color: #3b82f6;
           box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
           background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+        }
+        
+        .shiny-badge {
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #f8fafc, #e2e8f0) padding-box,
+                      linear-gradient(135deg, #3b82f6, #8b5cf6, #3b82f6) border-box;
+          box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5);
         }
       `}</style>
 
@@ -179,7 +186,7 @@ export default function Home() {
             {/* Left Content */}
             <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-full px-4 py-2 mb-8">
+              <div className="inline-flex items-center gap-2 shiny-badge rounded-full px-4 py-2 mb-8">
                 <div className="w-2 h-2 navy-gradient rounded-full animate-pulse"></div>
                 <span className="text-sm font-semibold text-slate-700">GTM Operating System</span>
               </div>
@@ -207,13 +214,13 @@ export default function Home() {
 
               {/* Trust Indicators */}
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <div className="flex items-center gap-3 bg-indigo-50/80 border border-indigo-200/60 rounded-xl px-6 py-4">
+                <div className="flex items-center gap-3 bg-slate-50/80 border border-slate-200/60 rounded-xl px-6 py-4">
                   <div className="w-3 h-3 bg-indigo-600 rounded-full animate-pulse"></div>
-                  <span className="font-semibold text-indigo-700">150+ SQLs in 90 days</span>
+                  <span className="font-semibold text-slate-700">150+ SQLs in 90 days</span>
                 </div>
-                <div className="flex items-center gap-3 bg-indigo-50/80 border border-indigo-200/60 rounded-xl px-6 py-4">
+                <div className="flex items-center gap-3 bg-slate-50/80 border border-slate-200/60 rounded-xl px-6 py-4">
                   <div className="w-3 h-3 bg-indigo-600 rounded-full animate-pulse"></div>
-                  <span className="font-semibold text-indigo-700">$390K revenue lift</span>
+                  <span className="font-semibold text-slate-700">$390K revenue lift</span>
                 </div>
               </div>
 
@@ -260,11 +267,11 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 lg:py-32 bg-white">
+      <section id="features" className="py-24 lg:py-32 bg-gradient-to-b from-purple-50 to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16 fade-in-section">
-            <div className="inline-flex items-center gap-2 bg-slate-100 border border-slate-200 px-4 py-2 mb-8">
+            <div className="inline-flex items-center gap-2 shiny-badge rounded-full px-4 py-2 mb-8">
               <div className="w-2 h-2 navy-gradient"></div>
               <span className="text-sm font-semibold text-slate-900">PLATFORM OVERVIEW</span>
             </div>
@@ -282,8 +289,8 @@ export default function Home() {
             {/* Feature 1 */}
             <div className="professional-card p-8 card-hover group">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 blue-gradient flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-purple-50 flex items-center justify-center border border-purple-200">
+                  <svg className="w-6 h-6" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
@@ -304,8 +311,8 @@ export default function Home() {
             {/* Feature 2 */}
             <div className="professional-card p-8 card-hover group">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 blue-gradient flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-purple-50 flex items-center justify-center border border-purple-200">
+                  <svg className="w-6 h-6" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
@@ -326,8 +333,8 @@ export default function Home() {
             {/* Feature 3 */}
             <div className="professional-card p-8 card-hover group">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 blue-gradient flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-purple-50 flex items-center justify-center border border-purple-200">
+                  <svg className="w-6 h-6" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
@@ -347,7 +354,7 @@ export default function Home() {
           </div>
 
           {/* Technical Specifications */}
-          <div className="bg-slate-50 p-12 mb-20 fade-in-section">
+          <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-12 mb-20 fade-in-section border border-purple-200">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-bold text-slate-900 mb-8">
@@ -355,8 +362,8 @@ export default function Home() {
                 </h3>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-8 h-8 blue-gradient flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-8 h-8 bg-purple-50 flex items-center justify-center border border-purple-200">
+                      <svg className="w-4 h-4" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -366,8 +373,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="w-8 h-8 blue-gradient flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-8 h-8 bg-purple-50 flex items-center justify-center border border-purple-200">
+                      <svg className="w-4 h-4" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -377,8 +384,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="w-8 h-8 blue-gradient flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-8 h-8 bg-purple-50 flex items-center justify-center border border-purple-200">
+                      <svg className="w-4 h-4" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -425,11 +432,11 @@ export default function Home() {
       </section>
 
       {/* Social Proof Section */}
-      <section id="proof" className="py-24 lg:py-32 bg-slate-50">
+      <section id="proof" className="py-24 lg:py-32 bg-gradient-to-b from-white to-purple-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16 fade-in-section">
-            <div className="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 rounded-full px-4 py-2 mb-8">
+            <div className="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 rounded-full px-4 py-2 mb-8 shadow-lg">
               <div className="w-2 h-2 navy-gradient rounded-full"></div>
               <span className="text-sm font-semibold text-white">PERFORMANCE METRICS</span>
             </div>
@@ -444,8 +451,8 @@ export default function Home() {
           {/* Metrics Grid - Professional */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 fade-in-section">
             <div className="professional-card p-8 text-center card-hover">
-              <div className="w-16 h-16 blue-gradient flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-purple-50 flex items-center justify-center mx-auto mb-6 border border-purple-200">
+                <svg className="w-8 h-8" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
@@ -456,8 +463,8 @@ export default function Home() {
             </div>
             
             <div className="professional-card p-8 text-center card-hover">
-              <div className="w-16 h-16 blue-gradient flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-purple-50 flex items-center justify-center mx-auto mb-6 border border-purple-200">
+                <svg className="w-8 h-8" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
@@ -468,8 +475,8 @@ export default function Home() {
             </div>
             
             <div className="professional-card p-8 text-center card-hover">
-              <div className="w-16 h-16 blue-gradient flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-purple-50 flex items-center justify-center mx-auto mb-6 border border-purple-200">
+                <svg className="w-8 h-8" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -480,8 +487,8 @@ export default function Home() {
             </div>
             
             <div className="professional-card p-8 text-center card-hover">
-              <div className="w-16 h-16 blue-gradient flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-purple-50 flex items-center justify-center mx-auto mb-6 border border-purple-200">
+                <svg className="w-8 h-8" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -496,7 +503,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 mb-20 fade-in-section">
             <div className="professional-card p-10 card-hover">
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-16 h-16 blue-gradient flex items-center justify-center text-white font-bold text-xl">
+                <div className="w-16 h-16 bg-purple-50 flex items-center justify-center font-bold text-xl border border-purple-200" style={{color: '#4f46e5'}}>
                   SC
                 </div>
                 <div>
@@ -527,7 +534,7 @@ export default function Home() {
 
             <div className="professional-card p-10 card-hover">
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-16 h-16 blue-gradient flex items-center justify-center text-white font-bold text-xl">
+                <div className="w-16 h-16 bg-purple-50 flex items-center justify-center font-bold text-xl border border-purple-200" style={{color: '#4f46e5'}}>
                   FT
                 </div>
                 <div>
@@ -558,7 +565,7 @@ export default function Home() {
           </div>
 
           {/* Enterprise Clients */}
-          <div className="bg-white border border-slate-200 rounded-xl p-12 mb-16 fade-in-section">
+          <div className="bg-gradient-to-r from-white to-purple-50 border border-purple-200 p-12 mb-16 fade-in-section shadow-lg">
             <div className="text-center mb-12">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
                 Trusted by Enterprise Organizations
@@ -590,11 +597,11 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 lg:py-32 bg-white">
+      <section id="pricing" className="py-24 lg:py-32 bg-gradient-to-b from-purple-50 to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16 fade-in-section">
-            <div className="inline-flex items-center gap-2 bg-slate-50 border border-slate-300 rounded-full px-4 py-2 mb-8">
+            <div className="inline-flex items-center gap-2 shiny-badge rounded-full px-4 py-2 mb-8">
               <div className="w-2 h-2 navy-gradient rounded-full"></div>
               <span className="text-sm font-semibold text-slate-700">SOLUTION COMPARISON</span>
             </div>
@@ -607,7 +614,7 @@ export default function Home() {
           </div>
 
           {/* Professional Comparison Table */}
-          <div className="bg-slate-50 p-12 mb-20 fade-in-section">
+          <div className="bg-gradient-to-r from-purple-50 to-slate-50 p-12 mb-20 fade-in-section border border-purple-200">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
@@ -615,8 +622,8 @@ export default function Home() {
                     <th className="text-left py-6 px-6 font-bold text-slate-900 text-lg">Implementation Approach</th>
                     <th className="text-center py-6 px-6 font-bold text-slate-900 text-lg">
                       <div className="flex flex-col items-center">
-                        <div className="w-12 h-12 blue-gradient flex items-center justify-center mb-2">
-                          <span className="text-white font-bold">K</span>
+                        <div className="w-12 h-12 bg-purple-50 flex items-center justify-center mb-2 border border-purple-200">
+                          <span style={{color: '#4f46e5'}} className="font-bold">K</span>
                         </div>
                         <span>KLYRR Platform</span>
                       </div>
@@ -665,8 +672,8 @@ export default function Home() {
           <div className="grid lg:grid-cols-3 gap-8 mb-20 fade-in-section">
             <div className="professional-card p-8 card-hover">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 blue-gradient flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-purple-50 flex items-center justify-center border border-purple-200">
+                  <svg className="w-6 h-6" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
@@ -684,8 +691,8 @@ export default function Home() {
 
             <div className="professional-card p-8 card-hover">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 blue-gradient flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-purple-50 flex items-center justify-center border border-purple-200">
+                  <svg className="w-6 h-6" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                   </svg>
                 </div>
@@ -703,8 +710,8 @@ export default function Home() {
 
             <div className="professional-card p-8 card-hover">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 blue-gradient flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-purple-50 flex items-center justify-center border border-purple-200">
+                  <svg className="w-6 h-6" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -749,8 +756,8 @@ export default function Home() {
               {/* Brand Column */}
               <div className="lg:col-span-2">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-12 h-12 blue-gradient flex items-center justify-center shadow-lg">
-                    <span className="text-white font-bold text-xl">K</span>
+                  <div className="w-12 h-12 bg-purple-50 flex items-center justify-center border border-purple-200 shadow-lg">
+                    <span style={{color: '#4f46e5'}} className="font-bold text-xl">K</span>
                   </div>
                   <div className="text-white text-3xl font-bold tracking-tight">
                     KLYRR
@@ -781,7 +788,7 @@ export default function Home() {
 
                 {/* Contact Info */}
                 <div className="flex items-center gap-3 text-white">
-                  <svg className="w-5 h-5 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <span>contact@klyrr.com</span>
@@ -791,7 +798,7 @@ export default function Home() {
               {/* Quick Links */}
               <div>
                 <h4 className="font-bold text-white mb-8 text-lg flex items-center gap-2">
-                  <svg className="w-5 h-5 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                   Quick Links
@@ -799,25 +806,25 @@ export default function Home() {
                 <div className="space-y-4">
                   <a href="#diagnosis" className="block text-white hover:text-white hover:pl-2 transition-all duration-200 group">
                     <span className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-indigo-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="w-1 h-1 navy-gradient rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       Free GTM Diagnosis
                     </span>
                   </a>
                   <a href="#engines" className="block text-white hover:text-white hover:pl-2 transition-all duration-200 group">
                     <span className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-indigo-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="w-1 h-1 navy-gradient rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       GTM Engines
                     </span>
                   </a>
                   <a href="#pricing" className="block text-white hover:text-white hover:pl-2 transition-all duration-200 group">
                     <span className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-indigo-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="w-1 h-1 navy-gradient rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       Pricing
                     </span>
                   </a>
                   <a href="#case-studies" className="block text-white hover:text-white hover:pl-2 transition-all duration-200 group">
                     <span className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-indigo-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="w-1 h-1 navy-gradient rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       Case Studies
                     </span>
                   </a>
@@ -827,7 +834,7 @@ export default function Home() {
               {/* Newsletter */}
               <div>
                 <h4 className="font-bold text-white mb-6 text-lg flex items-center gap-2">
-                  <svg className="w-5 h-5 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" style={{color: '#4f46e5'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5-5-5h5v-5a7.07 7.07 0 00-7-7H3v5h5V5z" />
                   </svg>
                   Newsletter
@@ -861,7 +868,7 @@ export default function Home() {
               <div className="text-white mb-4 md:mb-0 flex items-center gap-4">
                 <span>© 2025 KLYRR. All rights reserved.</span>
                 <div className="hidden md:block w-1 h-1 bg-white rounded-full"></div>
-                <span className="text-white">Made with ❤️ for SaaS growth</span>
+                <span className="text-white">Built for SaaS growth</span>
               </div>
               <div className="flex gap-8">
                 <a href="#privacy" className="text-white hover:text-white transition-colors text-sm flex items-center gap-1 group">
